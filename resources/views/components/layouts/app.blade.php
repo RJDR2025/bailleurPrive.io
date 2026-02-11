@@ -12,8 +12,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @fluxAppearance
     </head>
-    <body class="min-h-screen bg-white dark:bg-zinc-800">
-        {{ $slot }}
+    <body class="min-h-screen bg-white">
+        @include('components.navbar')
+
+        <main>
+            {{ $slot }}
+        </main>
+
+        @include('components.footer')
 
         @fluxScripts
     </body>
